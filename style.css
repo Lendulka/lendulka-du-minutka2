@@ -22,7 +22,7 @@ body {
 
 .alarm {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 30rem;
@@ -35,15 +35,19 @@ body {
   0% {
     transform: rotateZ(0deg);
   }
+
   25% {
     transform: rotateZ(5deg);
   }
+
   50% {
     transform: rotateZ(0deg);
   }
+
   75% {
     transform: rotateZ(-5deg);
   }
+
   100% {
     transform: rotateZ(0deg);
   }
@@ -57,10 +61,18 @@ body {
 .alarm__minutes {
   font-size: 3rem;
   line-height: 3rem;
+  width: 3.6rem;
+  text-align: center;
 }
 
 .alarm__minutes {
-  font-weight: 900;
+  font-weight: 100;
+}
+
+.alarm__minutes::after {
+  content: ':';
+  display: inline-block;
+  width: 0.2rem;
 }
 
 .alarm__seconds {
