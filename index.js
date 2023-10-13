@@ -12,6 +12,8 @@ const setAlarm = (event) => {
         alarmMin.textContent = String(timeInput).padStart(2, '0')
         alarmSec.textContent = '00'
 
+        myAlarm.classList.remove('alarm--ring')
+
         const deduct = () => {
             if (timeInputSec > 0) {
                 timeInputSec = (timeInputSec - 1)
